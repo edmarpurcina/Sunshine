@@ -14,7 +14,7 @@ public class DetailActivit extends ActionBarActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_detail);
 
-        if (savedInstanceState == null){
+        if (savedInstanceState == null) {
             getSupportFragmentManager().beginTransaction().add(R.id.container_detail, new DetailActivitFragment()).commit();
         }
 
@@ -38,10 +38,11 @@ public class DetailActivit extends ActionBarActivity {
         //noinspection SimplifiableIfStatement
         if (id == R.id.action_settings) {
             startActivity(new Intent(this, SettingsActivity.class));
-            System.out.print("alou");
             return true;
         }
 
         return super.onOptionsItemSelected(item);
     }
+
+
 }
