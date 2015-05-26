@@ -50,6 +50,7 @@ public class DetailActivitFragment extends Fragment {
     @Override
     public void onCreateOptionsMenu(Menu menu, MenuInflater inflater) {
         // Inflate the menu; this adds items to the action bar if it is present.
+
         inflater.inflate(R.menu.detailfragment, menu);
 
         // Retrieve the share menu item
