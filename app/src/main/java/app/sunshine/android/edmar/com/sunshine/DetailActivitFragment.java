@@ -71,10 +71,13 @@ public class DetailActivitFragment extends Fragment {
 
     private Intent createShareForecastIntent() {
         Intent shareIntent = new Intent(Intent.ACTION_SEND);
-        shareIntent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_WHEN_TASK_RESET);
+        //shareIntent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_WHEN_TASK_RESET);//volta para a plicacao principal
         shareIntent.setType("text/plain");
+
+        shareIntent.putExtra(Intent.EXTRA_SUBJECT, "Mensagem de Teste");
         shareIntent.putExtra(Intent.EXTRA_TEXT,
                 mForecastStr + FORECAST_SHARE_HASHTAG);
+
         return shareIntent;
     }
 }
